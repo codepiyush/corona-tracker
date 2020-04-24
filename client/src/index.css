@@ -17,24 +17,104 @@ nav {
     text-align: center;
     font-family: 'Montserrat', sans-serif;
 }
-.main{
+
+.main {
     padding: 20px;
     display: flex;
     max-height: calc(100vh - 57px - 40px);
 }
 
 svg {
-    fill: red;
     /* stroke-width: 1px; */
     stroke: black;
     width: 100%;
     height: 100%;
 }
-.map{
+
+.map {
     flex: 60%;
     min-height: calc(100vh - 57px - 40px);
 }
+
 .data {
     flex: 35%;
     min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.upper {
+    display: flex;
+}
+
+.upper div {
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    color: #ffffff;
+    font-size: 15px;
+    background-color: #2c2c2c;
+    border-radius: 7px;
+}
+
+.upper div:nth-child(1) {
+    background-color: #461b02;
+    min-width: 150px;
+}
+
+.upper div:nth-child(2) {
+    min-width: 150px;
+    background-color: #073a0a;
+}
+
+.upper div:nth-child(3) {
+    min-width: 150px;
+    background-color: #680707cb;
+}
+
+.upper div:nth-child(4) {
+    /* max-height: 50px; */
+    margin: auto;
+    background-color: #1d1b1b;
+    cursor: pointer;
+}
+
+.redInc {
+    color: rgb(255, 94, 0);
+    font-size: 12px;
+    padding: 0px 5px;
+}
+
+.table {
+    overflow-y: scroll;
+    width: 100%;
+    color: #ffffffd7;
+}
+
+table {
+    width: 100%;
+    padding: 10px;
+    border-collapse: collapse;
+    position: relative;
+}
+
+th {
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: #1c2a35;
+}
+
+td {
+    padding: 10px;
+    background-color: #232323;
+    text-align: center;
+    border-radius: 4px;
+}
+
+tr {
+    border-bottom: 1px solid #1d1b1b;
 }
