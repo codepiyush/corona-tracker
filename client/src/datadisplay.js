@@ -22,9 +22,6 @@ function DataDisplay({ data }) {
                     <p>Deaths</p>
                     <p> <span className="redInc">{data[0].deaths.new}</span> {data[0].deaths.total}</p>
                 </div>
-                <div>
-                    <p>More Details</p>
-                </div>
             </div>
             <div className="table md-whiteframe-2dp">
                 <table>
@@ -35,10 +32,10 @@ function DataDisplay({ data }) {
                         <th >Deaths</th>
                     </tr>
                     {
-                        data.map(dat=>{
-                            return(
+                        data.map(dat => {
+                            return (
                                 <tr>
-                                    <td style={{textAlign:"justify", paddingLeft: "15px"}}>{dat.country}</td>
+                                    <td style={{ textAlign: "justify", paddingLeft: "15px" }}>{dat.country}</td>
                                     <td>{dat.cases.total}</td>
                                     <td>{dat.cases.recovered}</td>
                                     <td>{dat.deaths.total}</td>

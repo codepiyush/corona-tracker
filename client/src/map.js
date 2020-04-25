@@ -43,7 +43,7 @@ class Map extends React.Component {
         return (
             <React.Fragment>
                 <svg
-
+                    id="map"
                     width="1009.6727"
                     height="665.96301"
                     viewBox="0 0 1100 600"
