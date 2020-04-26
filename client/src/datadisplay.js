@@ -1,7 +1,15 @@
-import React from 'react'
+import React, {useState} from 'react'
+import Modal from './modal';
 
 function DataDisplay({ data }) {
-    // console.log(data)
+
+    const [name, setName] =  useState("India");
+    const renderDetails = (e) => {
+        var modal = document.getElementsByClassName("modal")[0];
+        setName(e.target.innerText)
+        modal.style.display = "flex";
+    }
+    
     return (
         <React.Fragment>
             <div className="upper">
@@ -35,7 +43,7 @@ function DataDisplay({ data }) {
                         data.map(dat => {
                             return (
                                 <tr>
-                                    <td style={{ textAlign: "justify", paddingLeft: "15px" }}>{dat.country}</td>
+                                    <td id="country-name" onClick={renderDetails} style={{ textAlign: "justify", paddingLeft: "15px" }}>{dat.country}</td>
                                     <td>{dat.cases.total}</td>
                                     <td>{dat.cases.recovered}</td>
                                     <td>{dat.deaths.total}</td>
@@ -44,7 +52,9 @@ function DataDisplay({ data }) {
                         })
                     }
                 </table>
+                <Modal name={name} />
             </div>
+
         </React.Fragment>
     )
 }

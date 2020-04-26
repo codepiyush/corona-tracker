@@ -2,6 +2,7 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -15,7 +16,6 @@ nav {
     font-size: 30px;
     letter-spacing: 1px;
     text-align: center;
-    font-family: 'Montserrat', sans-serif;
 }
 
 .main {
@@ -90,13 +90,21 @@ table {
     border-collapse: collapse;
     position: relative;
 }
-
+.red{
+    color: rgb(247, 22, 22);
+}
+.green {
+    color: #16f57a;
+}
 th {
     padding: 10px;
     position: sticky;
     top: 0;
     z-index: 2;
     background-color: #1c2a35;
+}
+#country-name{
+    cursor: pointer;
 }
 
 td {
@@ -172,6 +180,58 @@ a {
     font-size: 15px;
     color: #09f894fb;
 }
+.modal {
+    position: fixed     ;
+    top: 0;
+    overflow-y: hidden;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.795);
+}
+.modal-inner {
+    border-radius: 5px;
+    background-color: #121212;
+    color: #ffffff;
+    padding: 10px 20px;
+    position: relative;
+    width: 500px;
+    min-height: 300px;
+    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
+}
+.modal-title {
+    padding: 10px;
+    text-align: center;
+    background-color: transparent;
+    font-size: 25px;
+    background-color:transparent;
+}
+.modal-table{
+    border-collapse:separate;
+    border-spacing: 0px 5px; 
+}
+.modal-table tr td {
+    text-align: start;
+    border-radius: 0px;
+    padding: 10px 30px;
+}
+.cross {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    height: 17px;
+    width: 17px;
+    text-align: center;
+    margin: auto;
+    padding: 2px;
+    background-color: #f3120a !important;
+}
+
 @keyframes loading-animation {
     0%{
         transform: scale(1);
@@ -230,4 +290,45 @@ a {
         padding: 10px;
         margin: 5px;
     }
+    .modal-inner{
+        width: 90%;
+    }
 }
+
+.lds-facebook {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-facebook div {
+    display: inline-block;
+    position: absolute;
+    left: 8px;
+    width: 16px;
+    background: #09f894fb;;
+    animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+  }
+  .lds-facebook div:nth-child(1) {
+    left: 8px;
+    animation-delay: -0.24s;
+  }
+  .lds-facebook div:nth-child(2) {
+    left: 32px;
+    animation-delay: -0.12s;
+  }
+  .lds-facebook div:nth-child(3) {
+    left: 56px;
+    animation-delay: 0;
+  }
+  @keyframes lds-facebook {
+    0% {
+      top: 8px;
+      height: 64px;
+    }
+    50%, 100% {
+      top: 24px;
+      height: 32px;
+    }
+  }
+  

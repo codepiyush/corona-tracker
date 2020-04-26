@@ -11,7 +11,7 @@ class Map extends React.Component {
             var i = 0;
              path.style.fill = "green"
             for (i = 0; i < this.props.data.length; i++) {
-                console.log(this.props.data[i].country)
+                // console.log(this.props.data[i].country)
 
                 if (path.getAttribute('title') === this.props.data[i].country) {
                     if (this.props.data[i].cases.total >= 500000) {
