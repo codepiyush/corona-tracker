@@ -5,6 +5,10 @@ function DataDisplay({ data }) {
 
     const [name, setName] =  useState("India");
     const renderDetails = (e) => {
+        var nameSec = e.target;
+        nameSec.style.backgroundColor = "#09f894fb";
+        nameSec.style.color = "#333";
+        setTimeout(()=>{ nameSec.style.backgroundColor = "#232323";nameSec.style.color = "#0681d3";},1000)
         var modal = document.getElementsByClassName("modal")[0];
         setName(e.target.innerText)
         modal.style.display = "flex";

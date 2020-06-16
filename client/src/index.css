@@ -105,6 +105,8 @@ th {
 }
 #country-name{
     cursor: pointer;
+    color: #0681d3;
+    transition-duration: .5s;
 }
 
 td {

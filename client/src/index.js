@@ -7,7 +7,7 @@ import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from '@apollo/react-hooks';
 
 const client = new ApolloClient({
-  uri: 'http://localhost:5000/graphql',
+  uri: 'https://corotrack-api.herokuapp.com/graphql',
 });
 
 ReactDOM.render(
